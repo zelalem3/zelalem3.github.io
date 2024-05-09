@@ -17,15 +17,15 @@
     border-radius: 5px;
     transition: background-color 0.3s;
     margin-bottom: 20px;
-    margin-left: 30%;
+    margin-left: 0%;
 }
 a {
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Use the default text color */
+    text-decoration: none;
+    color: black;
 }
 
 a:hover {
-    color: inherit; /* Use the default text color on hover */
+    color: black; /* Use the default text color on hover */
     text-decoration: none; /* Remove underline on hover */
 }
 
@@ -108,14 +108,32 @@ a:hover {
     }
     .cover-image {
         width: 100%;
-        height: 400px; /* adjust as needed */
-        background-image: url('../static/images/473.jpg');
+        height: 600px; /* adjust as needed */
+
         background-size: cover;
         background-position: center;
     }
     .feature {
         margin-top: 50px;
     }
+    .containe {
+    position: relative;
+    text-align: center;
+}
+
+.text {
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: white; /* Text color */
+
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Adjust the styles as needed */
+
 </style>
 </head>
 <body>
@@ -147,15 +165,17 @@ a:hover {
 </nav>
 
 <!-- Intro Section -->
-<section class="intro">
-    <div class="container">
-        <div class="cover-image"></div>
+
+    <div class="containe">
+        <div class="cover-image" style="background-image: 'static/images/background.avif';">
+            <div class="text">
         <h1>Welcome to SEcollab</h1>
         <p>A platform for software engineers to collaborate, write blogs, and connect with others.</p>
 
-        <a href="templates/index.html" class="btn btn-primary">View Project</a>
+        <a href="link_to_deployed_project" class="btn btn-light">View Project</a>
+            </div>
     </div>
-</section>
+
 
 <section id="features" class="features">
     <div class="container">
@@ -163,21 +183,21 @@ a:hover {
         <div class="row">
             <div class="col-md-4">
                 <div class="feature">
-                    <img src="path_to_feature_image.jpg" alt="Feature Image">
+                    <img src="static/images/blogs.PNG" alt="Feature Image">
                     <h3>Write your own Blog</h3>
                     <p>A user can add their own blog.</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="feature">
-                    <img src="path_to_feature_image.jpg" alt="Feature Image">
+                    <img src="static/images/myprojects.PNG" alt="Feature Image">
                     <h3>Add project for collaboration</h3>
                     <p>A project could be put up for collaboration, and the owner can choose who to collaborate with.</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="feature">
-                    <img src="path_to_feature_image.jpg" alt="Feature Image">
+                    <img src="static/images/follow.PNG" alt="Feature Image">
                     <h3>Follow fellow SE</h3>
                     <p>By following other SE, we can get access to their blogs and have access to their projects.</p>
                 </div>
@@ -189,12 +209,18 @@ a:hover {
 <section id="about">
     <div class="container">
         <h2>About</h2>
-        <p>Description of what inspired the project.</p>
+        <p>The inspiration behind SEcollab stems from the challenges we faced in finding project partners.
+            We realized that existing automatic matching systems often fall short in connecting us with peers
+            who share our vision and goals. This led us to envision a platform where users can actively seek
+            collaboration for their projects, allowing them to find like-minded partners who are passionate about
+            the same ideas. By providing a space for users to connect and collaborate based on their specific project needs,
+            SEcollab aims to facilitate meaningful partnerships and foster innovation in the software engineering community.</p>
 
     </div>
 </section>
 <section id="team" class="team">
     <div class="container">
+         <h2>Team</h2>
         <div class="row">
             <div class="col-md-6">
                 <div class="member">
@@ -218,7 +244,7 @@ a:hover {
 </a>
 <footer>
     <div class="container">
-        <p>&copy; 2024 Your Company, All rights reserved.</p>
+        <p>2024 SEcollab, All rights reserved.</p>
     </div>
 </footer>
 
