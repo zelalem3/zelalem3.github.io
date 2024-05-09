@@ -1,0 +1,122 @@
+ body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .masthead {
+      position: relative;
+      height: 60vh;
+      background-image: url(../static/images/dog-img.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding-top: 80px;
+      padding-bottom: 50px;
+      margin-top: 0px;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .site-heading {
+      text-align: center;
+      color: #fff;
+      padding-top: 50px;
+      padding-bottom: 25px;
+    }
+
+    .site-heading h1 {
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    .site-heading .subheading {
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 1.1;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .card-columns {
+      column-count: 2;
+    }
+
+    .card {
+      border: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+      margin-bottom: 30px;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card-img-top {
+      width:100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      margin-left: 20%;
+    }
+
+
+    .card-text {
+      font-size: 16px;
+      font-weight: 400;
+      color: #777;
+    }
+    .container{
+    margin-top: 50px;
+    }
+    a{
+    text-decoration: none;
+    text-align: center;
+    }
+    .navbar-nav .nav-link:hover {
+  color: grey;
+}
+.navbar-nav .nav-link {
+  color: white;
+}
+.navbar-nav .nav-link.active {
+  color: white;
+}
+ .parent {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+       animation: scroll 1s ease-in-out;/* Adjust the gap between child divs */
+    }
+
+    .child {
+      width: calc(33% - 40px); /* 25% width for each child div with 10px gap */
+
+      padding: 20px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }

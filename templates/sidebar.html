@@ -1,0 +1,53 @@
+<button class="btn btn-dark" style="position: fixed; margin-top:10px;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+  <i class="fa-solid fa-bars" ></i>
+</button>
+
+
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <img src="../{{ user.profile_photo }}" style="width: 50px; height: 45px; border-radius: 100%; object-fit: cover; padding-right: 10px;">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel" >{{ user.fname }} {{ user.lname }}</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <!-- Profile Section -->
+    <div class="menu-section">
+      <h6>Profile</h6>
+      <ul class="menu-list">
+        <li><a href="{{ url_for('myprofile') }}">My Profile</a></li>
+        <li><a href="{{ url_for('myfollowers') }}">My Followers</a></li>
+        <li><a href="{{ url_for('myfollowing') }}">My Following</a></li>
+        <li><a href="{{ url_for('otherusers') }}">Other Users</a></li>
+      </ul>
+    </div>
+    <!-- Blogs Section -->
+    <div class="menu-section">
+      <h6>Blogs</h6>
+      <ul class="menu-list">
+        <li><a href="{{ url_for('myblogs') }}">My Blogs</a></li>
+        <li><a href="{{ url_for('newblog') }}">Add New Blog</a></li>
+        <li><a href="{{ url_for('followingblogs') }}">Following Blogs</a></li>
+        <li><a href="{{ url_for('allblogs') }}">Random Blogs</a></li>
+      </ul>
+    </div>
+    <!-- Projects Section -->
+    <div class="menu-section">
+      <h6>Projects</h6>
+      <ul class="menu-list">
+        <li><a href="{{ url_for('myprojects') }}">My Projects</a></li>
+        <li><a href="{{ url_for('allcollbration') }}">Projects for Collaboration</a></li>
+        <li><a href="{{ url_for('addcollab') }}">Add Project</a></li>
+      </ul>
+    </div>
+      <div class="menu-section">
+      <h6>Account</h6>
+      <ul class="menu-list">
+        <li><a href="{{ url_for('editprofile') }}">Edit My profile</a></li>
+        <li><a href="{{ url_for('changepassword') }}">Change password</a></li>
+        <li><a href="{{ url_for('forgetpassword') }}">Forget password</a></li>
+          <li><a href="{{ url_for('deleteaccount') }}">Delete Account</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

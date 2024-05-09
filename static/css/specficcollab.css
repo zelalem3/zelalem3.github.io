@@ -1,0 +1,71 @@
+/* Set a background color and font styles */
+body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the main container */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* Style the heading */
+h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Style the follow button */
+.btn{
+  display: inline-block;
+  padding: 10px 20px;
+
+  margin-left: 40%;
+}
+
+.follow-button:hover {
+  background-color: #0056b3;
+}
+
+/* Style the error message */
+.error-message {
+  color: #f44336;
+  margin-top: 10px;
+}
+
+/* Style the navbar */
+.navbar {
+  background-color: #333;
+}
+
+.navbar-brand {
+  color: #fff;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ccc;
+}
+h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem; /* Adjust the font size as needed */
+  font-weight: bold; /* Make the text bold */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
+  letter-spacing: 1px; /* Add a small amount of letter spacing */
+  text-transform: capitalize; /* Capitalize the first letter of each word */
+}

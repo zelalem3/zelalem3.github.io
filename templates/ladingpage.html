@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEcollab landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="../static/css/landingpage.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+.github-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333; /* Dark background color */
+    color: #fff; /* White text color */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+    margin-left: 30%;
+}
+a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Use the default text color */
+}
+
+a:hover {
+    color: inherit; /* Use the default text color on hover */
+    text-decoration: none; /* Remove underline on hover */
+}
+
+.team {
+    padding: 50px 0;
+    background-color: #f8f9fa; /* Light gray background */
+}
+
+.member {
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 30px;
+    background-color: #fff; /* White background */
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle depth effect */
+}
+
+.member h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.member p {
+    font-size: 1rem;
+    color: #666; /* Lighter text color */
+    margin-bottom: 5px;
+}
+
+.member a {
+    color: #007bff; /* Blue link color */
+}
+
+.member a:hover {
+    text-decoration: none;
+    color: #0056b3; /* Darker blue on hover */
+}
+
+.features {
+    padding: 50px 0;
+    background-color: #f8f9fa; /* Light gray background */
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #333; /* Dark text color */
+}
+
+.feature {
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 30px;
+    background-color: #fff; /* White background */
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle depth effect */
+}
+
+.feature img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #666; /* Lighter text color */
+}
+
+    a{
+    text-decoration: none;
+    }
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .cover-image {
+        width: 100%;
+        height: 400px; /* adjust as needed */
+        background-image: url('../static/images/473.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    .feature {
+        margin-top: 50px;
+    }
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-body" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">SEcollab</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+
+        <li class="nav-item">
+          <a class="nav-link"  href="{{ url_for('allcollbration') }}">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  href="{{ url_for('allblogs') }}">Blogs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('otherusers') }}">Users</a>
+        </li>
+      </ul>
+
+
+    </div>
+  </div>
+</nav>
+
+<!-- Intro Section -->
+<section class="intro">
+    <div class="container">
+        <div class="cover-image"></div>
+        <h1>Welcome to SEcollab</h1>
+        <p>A platform for software engineers to collaborate, write blogs, and connect with others.</p>
+
+        <a href="link_to_deployed_project" class="btn btn-primary">View Project</a>
+    </div>
+</section>
+
+<section id="features" class="features">
+    <div class="container">
+        <h2 class="section-title">Features</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="feature">
+                    <img src="path_to_feature_image.jpg" alt="Feature Image">
+                    <h3>Write your own Blog</h3>
+                    <p>A user can add their own blog.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature">
+                    <img src="path_to_feature_image.jpg" alt="Feature Image">
+                    <h3>Add project for collaboration</h3>
+                    <p>A project could be put up for collaboration, and the owner can choose who to collaborate with.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature">
+                    <img src="path_to_feature_image.jpg" alt="Feature Image">
+                    <h3>Follow fellow SE</h3>
+                    <p>By following other SE, we can get access to their blogs and have access to their projects.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About Section -->
+<section id="about">
+    <div class="container">
+        <h2>About</h2>
+        <p>Description of what inspired the project.</p>
+
+    </div>
+</section>
+<section id="team" class="team">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="member">
+                    <h3>Name: Fikadu Getnet</h3>
+                    <p><a href="https://github.com/fikadu5">Github profile: https://github.com/fikadu5</a></p>
+                    <p><a href="#">LinkedIn profile</a></p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="member">
+                    <h3>Name: Zelalem Getnet</h3>
+                    <p><a href="https://github.com/zelalem3">Github profile: https://github.com/zelalem3</a></p>
+                    <p><a href="https://www.linkedin.com/in/zelalem-getnet-533326246">LinkedIn profile: https://www.linkedin.com/in/zelalem-getnet-533326246</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<a href="https://github.com/zelalem3/SEcollab" class="github-link">
+    <p>Github Repository: https://github.com/zelalem3/SEcollab</p>
+</a>
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Your Company, All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

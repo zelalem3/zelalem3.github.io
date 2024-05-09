@@ -1,0 +1,68 @@
+/* Add Google Font for headings */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Light gray background */
+    color: #333; /* Dark text color */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #343a40; /* Dark background color */
+}
+
+.navbar-brand {
+    color: #fff; /* White text color */
+}
+
+.nav-link {
+    color: #fff; /* White text color */
+    margin-right: 15px; /* Add some spacing between links */
+}
+
+/* Cover Image */
+.cover-image {
+    height: 400px;
+    background-image: url('../static/images/473.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Features Section */
+.feature {
+    margin-top: 50px;
+}
+
+.feature img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px; /* Add some spacing below images */
+}
+
+/* About Section */
+#about {
+    margin-top: 50px;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40; /* Dark background color */
+    color: #fff; /* White text color */
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Button */
+.btn-primary {
+    background-color: #007bff; /* Blue color for primary buttons */
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    border-color: #0056b3;
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../static/images/newohana.PNG" type="image/png">
+  <title>About Us - SEcollab</title>
+	  <link rel="stylesheet" href="path/to/fontawesome.min.css">
+  <link rel="stylesheet" href="../static/css/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="../static/css/about.css">
+<link rel="stylesheet" href="../static/css/sidebar.css">
+</head>
+
+
+<body>
+{% if is_logged_in %}
+	{% include "navigationloggedin.html" %}
+	{% include "sidebar.html" %}
+{% else %}
+	{% include "navigationloggedout.html" %}
+
+{% endif %}
+<div class="image-aboutus-banner"style="">
+   <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+         <h1 class="lg-text">About Us - SEcollab</h1>
+         <p class="image-aboutus-para">A platform for software engineers to collaborate on projects, share blogs, and connect with other professionals.</p>
+       </div>
+    </div>
+</div>
+</div>
+<div class="bread-bar">
+    	<div class="container">
+        	<div class="row">
+            	<div class="col-md-8 col-sm-6 col-xs-8">
+                    <ol class="breadcrumb">
+                        <li><a href="{{ url_for('home') }}">Home</a></li>
+                        <li class="active">About Us</li>
+                    </ol>
+            	</div>
+                <div class="col-md-4 col-sm-6 col-xs-4">
+                </div>
+            </div>
+      	</div>
+    </div>
+<div class="aboutus-secktion paddingTB60">
+    <div class="container">
+        <div class="row">
+                	<div class="col-md-6">
+                    	<h1 class="strong">Who we are and<br>what we do</h1>
+                        <p class="lead">SEcollab is the world's leading portal for software engineers to collaborate on projects, share insights through blogs, and connect with other professionals.</p>
+                    </div>
+                    <div class="col-md-6">
+                    	<p>Our platform offers a unique opportunity for software engineers to showcase their projects, seek collaborations, and learn from others in the field. With a focus on fostering a community of like-minded individuals, SEcollab aims to revolutionize the way software engineers collaborate and share knowledge.</p>
+                    </div>
+</div>
+    </div>
+</div>
+<div class="container team-sektion paddingTB60">
+	<div class="row">
+		<div class="site-heading text-center">
+						<h3>Our Team</h3>
+						<p>Meet the dedicated team behind SEcollab, committed to providing the best platform for software engineers worldwide.</p>
+						<div class="border"></div>
+					</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4 team-box">
+		    <div class="team-img thumbnail">
+		        <img src="../static/images/team-member1.jpg" alt="team member">
+		    <div class="team-content">
+		        <h3>Fikadu Getnet</h3>
+		        <div class="border-team"></div>
+		        <p>Lead Developer</p>
+		        <div class="social-icons">
+               <a href="#"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+               <a href="#"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+	            <a href="#"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+	            <a href="#"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+	        </div>
+		    </div>
+		</div>
+	</div>
+	    <div class="col-md-6 team-box">
+		    <div class="team-img thumbnail">
+		        <img src="../static/images/team-member2.jpg" alt="team member">
+		    <div class="team-content">
+		        <h3>Zelalem Getnet</h3>
+		        <div class="border-team"></div>
+		        <p>Lead Designer</p>
+		        <div class="social-icons">
+               <a href="#"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+               <a href="#"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+	            <a href="#"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+	            <a href="#"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+	        </div>
+		    </div>
+		</div>
+	</div>
+
+</div>
+</div>
+
+<div class="footer-section">
+    <div class="footer">
+	<div class="container">
+		<div class="col-md-6 footer-one">
+			<h5>About Us</h5>
+		    <p>SEcollab is a platform for software engineers to collaborate on projects, share insights through blogs, and connect with other professionals.</p>
+		    	<div class="social-icons">
+               <a href="#"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+               <a href="#"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+	            <a href="#"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+	            <a href="#"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+	        </div>
+		</div>
+		<div class="parent">
+		<div class="col-md footer-two child">
+		    <h5>Information</h5>
+		    <ul>
+
+									<li><a href="{{ url_for('contact') }}">Contact</a></li>
+
+
+									<li><a href="{{ url_for('about') }}">Partners</a></li>
+								</ul>
+		</div>
+		<div class="col-md footer-three child">
+		    <h5>Helpful Links</h5>
+		    <ul>
+
+									<li><a href="contact.html">Locations</a></li>
+									<li><a href="about.html">Testimonials</a></li>
+									<li><a href="about.html">Careers</a></li>
+									<li><a href="about.html">Partners</a></li>
+								</ul>
+		</div>
+		<div class="col-md footer-four child">
+		    <h5>Helpful Links</h5>
+		    <ul>
+
+									<li><a href="contact.html">Locations</a></li>
+									<li><a href="about.html">Testimonials</a></li>
+									<li><a href="about.html">Careers</a></li>
+									<li><a href="about.html">Partners</a></li>
+								</ul>
+		</div>
+</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+    <div class="footer-bottom">
+        <div class="container">
+					<div class="row">
+						<div class="col-sm-12 text-center">
+							<div class="copyright-text">
+								<p>CopyRight © 2023 SEcollab. All Rights Reserved.</p>
+							</div>
+						</div> <!-- End Col -->
+
+					</div>
+				</div>
+    </div>
+</div>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+    a{
+    text-decoration: none;
+
+    }
+    .offcanvas-title {
+    /* Add your styling properties here */
+    color: black;
+    font-size: 18px;
+    /* Other styling properties */
+}
+    li {
+    color: black;
+}
+.offcanvas {
+    z-index: 10000; /* Adjust as needed */
+}
+.offcanvas .menu-list li {
+    list-style: none; /* Remove default list styling */
+    margin-bottom: 5px; /* Add some spacing between items */
+}
+
+.offcanvas .menu-list a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #3498db; /* Set a background color */
+    border-radius: 5px; /* Add rounded corners */
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.offcanvas .menu-list a:hover {
+    background-color: #2980b9; /* Darken the background color on hover */
+    transform: translateY(-2px); /* Add a slight lift effect */
+    text-decoration: none; /* Remove underline on hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}

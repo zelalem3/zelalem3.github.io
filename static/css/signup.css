@@ -1,0 +1,58 @@
+/* Customize form container */
+.form-container {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+
+/* Style form labels */
+label {
+  font-weight: bold;
+}
+
+/* Style form inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 3px;
+}
+
+/* Style submit button */
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Style login link */
+.login-link {
+  margin-top: 10px;
+}
+
+/* Style flash messages */
+.flash-message-container {
+  margin-bottom: 20px;
+}
+
+.flash-message-item {
+  margin-bottom: 5px;
+}
+
+.flash-message-list {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+.container{
+width: 50%;
+}

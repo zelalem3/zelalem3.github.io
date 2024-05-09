@@ -1,0 +1,29 @@
+     body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa; /* Bootstrap bg-body color */
+            padding-top: 60px; /* Adjusted for navbar height */
+        }
+        .navbar-brand {
+            font-size: 1.5rem; /* Larger font size for brand */
+        }
+        .nav-link {
+            color: #343a40; /* Bootstrap dark color */
+        }
+        .nav-link:hover {
+            color: #007bff; /* Bootstrap primary color on hover */
+        }
+        /* Custom styles for project details */
+        .project-details {
+            background-color: #fff; /* White background */
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-top: 20px; /* Add some space between navbar and details */
+        }
+        .card-img-top {
+    width: 70%;
+    height: 10%;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}

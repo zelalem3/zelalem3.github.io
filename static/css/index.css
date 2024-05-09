@@ -1,0 +1,118 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+
+
+.hero-content {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    color: white;
+}
+
+section {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.blog-post, .project, .user {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 5px solid #2575fc;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.blog-post h3, .project h3, .user h3 {
+    color: #333;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.login-container {
+    background-color: white;
+    max-width: 360px;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    border-radius: 8px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.dropdown-menu li {
+    padding: 10px;
+}
+
+.dropdown-menu a {
+    text-decoration: none;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around; /* Adjusts space between sections */
+    margin: 20px;
+}
+
+.blogs, .projects, .users {
+    flex: 1; /* Each takes equal width */
+    margin: 0 10px; /* Space between columns */
+    padding: 10px;
+    background-color: #fff; /* White background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.blog-post, .project, .user {
+    margin-bottom: 20px; /* Space between entries */
+}
+
+.user img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Circle shape */
+    display: block;
+    margin: 10px auto; /* Centering */
+}
+
+h2 {
+    text-align: center; /* Centers section headers */
+}
+.offcanvas a {
+    color: white;
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.offcanvas a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+

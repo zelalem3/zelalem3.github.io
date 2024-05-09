@@ -1,0 +1,15 @@
+  .parent {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+       animation: scroll 1s ease-in-out;/* Adjust the gap between child divs */
+    }
+
+    .child {
+      width: calc(33% - 40px); /* 25% width for each child div with 10px gap */
+
+      padding: 20px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
