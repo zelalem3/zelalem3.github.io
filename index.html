@@ -1,255 +1,1306 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SEcollab landing Page</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-<link rel="stylesheet" href="../static/css/landingpage.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<style>
-.github-link {
+  <title>OHANA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+
+  <link rel="icon" href="../static/images/newohana.PNG" type="image/png">
+  <link href="https://your-font-service.com/fonts/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../static/css/index.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="../static/css/onload.css">
+  <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.3/components/testimonials/testimonial-3/assets/css/testimonial-3.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <style>
+      
+* {
+  margin: 0;
+  padding: 0;
+}
+ body {
+    background-color: #31363F;
+     font-family: 'Whitney SSm A', 'Whitney SSm B', Helvetica, Arial, sans-serif;
+  }
+  /* Setting up the Whitney font with fallbacks */
+ @font-face {
+          font-family: 'Whitney SSm A';
+          src: url('path/to/whitney-ssm-a.woff2') format('woff2'),
+               url('path/to/whitney-ssm-a.woff') format('woff');
+        }
+
+        @font-face {
+          font-family: 'Whitney SSm B';
+          src: url('path/to/whitney-ssm-b.woff2') format('woff2'),
+               url('path/to/whitney-ssm-b.woff') format('woff');
+        }
+
+
+
+header {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Style the hero section */
+/* Base styles for hero-section */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  background-image: url(../images/cover.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 10%;
+  margin-top:10px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 20px;
+    background-position: top;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding-left: 100px;
+    background-position: top;
+  }
+}
+
+.hero-content {
+  flex-basis: 50%;
+  max-width: 800px; /* Limit max width for better responsiveness */
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 60%;
+}
+
+.hero-content p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.hero-content .btn {
+  margin: 10px;
+}
+
+/* Media query for portrait phones (up to 480px) */
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 20px; /* Reduce padding */
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .hero-content h1 {
+    font-size: 24px; /* Smaller font for smaller screens */
+  }
+
+  .hero-content p {
+    font-size: 16px; /* Adjust font size */
+  }
+
+  .hero-content .btn {
+    display: block;
+    width: 100%;
+    margin: 5px 0; /* Stack buttons vertically */
+  }
+
+  .hero-image img {
+    width: 100%; /* Adjust image width */
+    margin-top: 20px; /* Add some space above image */
+  }
+}
+
+/* Media query for larger phones (between 481px and 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .hero-section {
+    padding: 30px; /* Adjust padding */
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .hero-content h1 {
+    font-size: 28px; /* Adjust as needed */
+  }
+
+  .hero-content p {
+    font-size: 17px; /* Adjust font size */
+  }
+
+  .hero-content .btn {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #333; /* Dark background color */
-    color: #fff; /* White text color */
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    margin-bottom: 20px;
-    margin-left: 0%;
-}
-a {
-    text-decoration: none;
-    color: black;
+    width: auto;
+    margin: 5px; /* Space buttons appropriately */
+  }
+
+  .hero-image img {
+    width: 100%; /* Adjust image width */
+    margin-top: 20px; /* Add some space above image */
+  }
 }
 
-a:hover {
-    color: black; /* Use the default text color on hover */
-    text-decoration: none; /* Remove underline on hover */
+/* Media query for tablets (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero-section {
+    padding: 40px;
+    flex-direction: row; /* Side by side layout */
+  }
+
+  .hero-content {
+    flex-basis: 50%;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+  }
+
+  .hero-content .btn {
+    display: inline-block;
+    margin: 10px;
+  }
+
+  .hero-image img {
+    width: 70%;
+    margin-top: 0; /* Remove extra margin */
+  }
 }
 
-.team {
-    padding: 50px 0;
-    background-color: #f8f9fa; /* Light gray background */
+/* Media query for desktops (1025px and above) */
+@media (min-width: 1025px) {
+  .hero-section {
+    padding: 40px;
+    flex-direction: row; /* Side by side layout */
+  }
+
+  .hero-content {
+    flex-basis: 50%;
+  }
+
+  .hero-content h1 {
+    font-size: 10px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+  }
+
+  .hero-content .btn {
+    display: inline-block;
+    margin: 10px;
+  }
+
+  .hero-image img {
+    width: 50%;
+    margin-top: 0; /* Remove extra margin */
+  }
 }
 
-.member {
-    text-align: center;
-    padding: 30px;
-    margin-bottom: 30px;
-    background-color: #fff; /* White background */
-    border-radius: 5px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle depth effect */
+
+.hero-content {
+  flex-basis: 50%;
 }
 
-.member h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+
+.hero-content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+
+  width: 100%
+  hieght: 60%;
 }
 
-.member p {
-    font-size: 1rem;
-    color: #666; /* Lighter text color */
-    margin-bottom: 5px;
+.hero-content p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 30px;
 }
 
-.member a {
-    color: #007bff; /* Blue link color */
+.hero-image img {
+  width: 800px;
+
+}
+li i{
+margin-top: 10px;
+font-size:25px;
 }
 
-.member a:hover {
-    text-decoration: none;
-    color: #0056b3; /* Darker blue on hover */
+
+.features-section {
+  background-color: #021f16;
+  padding: 40px;
+  text-align: center;
 }
 
-.features {
-    padding: 50px 0;
-    background-color: #f8f9fa; /* Light gray background */
+.features-section h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
 }
 
-.section-title {
-    text-align: center;
-    margin-bottom: 50px;
-    color: #333; /* Dark text color */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 500px));
+  gap: 20px;
+  justify-content: center;
 }
+
 
 .feature {
-    text-align: center;
-    padding: 30px;
-    margin-bottom: 30px;
-    background-color: #fff; /* White background */
-    border-radius: 5px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle depth effect */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  text-align: center;
 }
 
 .feature img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 20px;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
 }
 
 .feature h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
 .feature p {
-    font-size: 1rem;
-    color: #666; /* Lighter text color */
+  font-size: 16px;
+  color: #666;
 }
 
-    a{
-    text-decoration: none;
+
+
+
+
+.cta-section {
+  background-color: #333;
+
+  text-align: center;
+}
+
+.cta-section h2 {
+  margin-top: 30px;
+  color: #fff;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.cta-button:hover {
+  background-color: #ccc;
+}
+
+/* Style the footer */
+footer {
+  background-color: #021f16;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 14px;
+}
+h1{
+color: black;
+}
+
+.navbar-nav .nav-link {
+  color: white;
+}
+.navbar-nav .nav-link.active {
+  color: white;
+}
+
+
+.navbar-nav .nav-link:hover {
+  color: grey;
+}
+h1 {
+     margin: 0;
+     font-size: 48px;
+     letter-spacing: 4px;
+     text-transform: uppercase;
+     color: black;
     }
-    body {
-        font-family: Arial, sans-serif;
+
+main {
+        flex: 1;
+        margin: 20px auto;
+        padding: 40px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        max-width: 800px;
     }
-    .cover-image {
+
+    section {
+        margin-bottom: 40px;
+    }
+
+    h2 {
+
+        font-size: 36px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin-left: 20px;
+    }
+
+    li {
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        font-size: 18px; /* Adjust the font size */
+        color: #555; /* Adjust the text color */
+    }
+
+    li i {
+        margin-right: 10px;
+        color: #333;
+        font-size: 20px;
+    }
+.transition-effect {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+ .social-icons {
+        position: fixed;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+    .social-icons a {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+    }
+     body {
+        margin: 0;
+        overflow: hidden;
+    }
+  .container {
+  display: flex;
+  width: 100%;
+  overflow-x: hidden;
+  animation: moveImages 13s linear infinite;
+}
+
+.image {
+   margin:30px;
+  width: 150px;
+  height: 140px;
+  background-size: cover;
+  background-position: center;
+  margin-right: 20px;
+}
+
+@keyframes moveImages {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .image {
+    width: 40%;
+  }
+
+  @keyframes moveImages {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-60%);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .image {
+    width: 100%;
+  }
+
+  @keyframes moveImages {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}
+
+
+
+    .parent {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+       animation: scroll 1s ease-in-out;/* Adjust the gap between child divs */
+    }
+
+    .child {
+      width: calc(33% - 40px); /* 25% width for each child div with 10px gap */
+
+      padding: 20px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    /* Adjust child div width for responsive layout */
+    @media (max-width: 768px) {
+      .child {
+        width: calc(50% - 10px);
+      }
+
+    }
+
+    @media (max-width: 480px) {
+      .child {
         width: 100%;
-        height: 600px; /* adjust as needed */
-        background-image: url('static/images/background.avif');
-        background-size: cover;
-        background-position: center;
+      }
+
     }
-    .feature {
-        margin-top: 50px;
+
+    .social-icon {
+  position: fixed;
+  z-index: 1;
+  color: white;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  transform: scale(1.5);
+}
+
+.social-icon-tiktok {
+  top: 30%;
+  right: 20px;
+}
+
+.social-icon-instagram {
+  top: 39%;
+  right: 20px;
+
+}
+
+.social-icon-telegram {
+  top: 47%;
+  right: 20px;
+  width: 100px;
+}
+
+.social-icon-youtube {
+  top: 55%;
+  right: 20px;
+  border-radius: 50%;
+}
+    body {
+    overflow-y: scroll; /* Enable vertical scrolling */
+}
+.childp, .childh2{
+margin-left: 10%;
+}
+.child {
+  position: relative;
+  overflow: hidden;
+
+}
+
+.child:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  z-index: 0;
+  transition: all 0.3s;
+  transform: translate(-50%, -50%) scale(2);
+  opacity: 0;
+}
+
+.child:hover:before {
+  transform: translate(-50%, -50%) scale(1.1);
+  opacity: 1;
+}
+
+.child img {
+  max-width: 100%;
+  z-index: 1;
+  position: relative;
+}
+
+.child h2,
+.child .childp {
+  position: relative;
+  z-index: 2;
+}
+
+.child {
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+
+.child:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.01);
+}
+@keyframes scroll {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.name, .fs-6,.test{
+margin-left: 25%;
+}
+.social-icon {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    background-color: #333;
+    padding: 10px;
+    transition: top 0.3s; /* Add smooth transition for top position */
+}
+
+#twitter-icon {
+    top: calc(30% + 0px); /* Initial position */
+}
+
+#instagram-icon {
+    top: calc(30% + 50px); /* Initial position */
+}
+
+#facebook-icon {
+    top: calc(30% + 100px); /* Initial position */
+}
+
+#youtube-icon {
+    top: calc(30% + 150px); /* Initial position */
+}
+
+@media (max-width: 768px) {
+    .social-icon {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        padding: 5px;
     }
-    .containe {
+
+    #twitter-icon {
+        top: calc(25% + 0px);
+    }
+
+    #instagram-icon {
+        top: calc(25% + 40px);
+    }
+
+    #facebook-icon {
+        top: calc(25% + 80px);
+    }
+
+    #youtube-icon {
+        top: calc(25% + 120px);
+    }
+}
+
+@media (max-height: 600px) {
+    .social-icon {
+        top: 25%;
+    }
+
+    #instagram-icon {
+        top: 40%;
+    }
+
+    #facebook-icon {
+        top: 55%;
+    }
+
+    #youtube-icon {
+        top: 70%;
+    }
+}
+@media (max-height: 320px) {
+    .social-icon {
+        top: 15%;
+    }
+
+
+    #instagram-icon {
+        top: 45%;
+    }
+
+    #facebook-icon {
+        top: 60%;
+    }
+
+    #youtube-icon {
+        top: 65%;
+    }
+}
+@media (max-height: 480px) {
+    .social-icon {
+        top: 20%;
+    }
+
+
+    #instagram-icon {
+        top: 35%;
+    }
+
+    #facebook-icon {
+        top: 50%;
+    }
+
+    #youtube-icon {
+        top: 65%;
+    }
+}
+.mb-0{
+padding-bottom: 10px;
+}
+
+
+body {
+  background-color: white;
+  color: black;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+/* Additional dark mode styles for other elements */
+header,  .hero-section,  .carousel, .testimonial {
+  background-color: #f0f0f0;
+  color: black;
+}
+
+body.dark-mode header,
+body.dark-mode footer,
+body.dark-mode .hero-section,
+body.dark-mode .container,
+body.dark-mode .carousel,
+body.dark-mode .testimonial,
+
+{
+  background-color: #333;
+  color: white;
+}
+img{
+width:100%;}
+body.dark-mode h1{
+color:white;
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: blue;
+  color: white;
+}
+body.dark-mode .container{
+background-color: black;}
+body.dark-mode .btn-primary {
+  background-color: darkblue;
+  color: white;
+}
+
+.btn-light {
+  background-color: white;
+  color: black;
+}
+
+body.dark-mode .btn-light {
+  background-color: #444;
+  color: white;
+}
+
+
+
+
+/* Importing fonts from Google */
+
+
+
+
+
+.owl-carousel .owl-item {
+    transition: all 0.3s ease-in-out;
+}
+
+.owl-carousel .owl-item .card {
+    padding: 30px;
     position: relative;
+}
+
+.owl-carousel .owl-stage-outer {
+    overflow-y: auto !important;
+    padding-bottom: 40px;
+}
+
+.owl-carousel .owl-item img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.owl-carousel .owl-item .card .name {
+    position: absolute;
+    bottom: -20px;
+    left: 33%;
+    color: #101c81;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background-color: aquamarine;
+    padding: 0.3rem 0.4rem;
+    border-radius: 5px;
+    box-shadow: 2px 3px 15px #3c405a;
+}
+
+.owl-carousel .owl-item .card {
+    opacity: 0.2;
+    transform: scale3d(0.8, 0.8, 0.8);
+    transition: all 0.3s ease-in-out;
+}
+
+.owl-carousel .owl-item.active.center .card {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+}
+
+.owl-carousel .owl-dots {
+    display: inline-block;
+    width: 100%;
     text-align: center;
 }
 
-.text {
-    position: absolute;
-    top: 15%;
-    left: 30%;
-    transform: translate(-50%, -50%);
-    color: white; /* Text color */
+.owl-theme .owl-dots .owl-dot span {
+    height: 20px;
 
-    padding: 20px;
-    border-radius: 5px;
+    border-radius: 2px !important;
+    opacity: 0.8;
 }
 
-/* Adjust the styles as needed */
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    height: 13px;
+    width: 13px;
+    opacity: 1;
+    transform: translateY(2px);
+    background: #83b8e7 !important;
+}
 
-</style>
+@media(min-width: 480.6px) and (max-width: 575.5px) {
+    .owl-carousel .owl-item .card .name {
+        left: 24%;
+
+    }
+}
+
+@media(max-width: 360px) {
+    .owl-carousel .owl-item .card .name {
+        left: 30%;
+
+    }
+}
+
+
+
+.animated-text {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 2s ease forwards;
+}
+
+.animated-text:nth-child(2) {
+    animation-delay: 0.8s;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+      HTML SCSS JSResult Skip Results Iframe
+EDIT ON
+* {
+  box-sizing: border-box;
+}
+
+.item {
+  width: 200px;
+  height: 200px;
+  margin: 50px auto;
+  padding-top: 75px;
+  background: #ccc;
+  text-align: center;
+  color: #FFF;
+  font-size: 3em;
+}
+View Compiled
+Resources1× 0.5× 0.25×Rerun
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap');
+
+    .test {
+
+      text-align: center;
+      color: #2c3e50;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .child {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .child.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .childh2 {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+      color: #2980b9;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+
+    .childp {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      color: #34495e;
+      max-width: 80%;
+      margin: 0 auto;
+      text-align: center;
+    }
+  .custom-toggler .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='#a0702c' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+    }
+
+  </style>
 </head>
+
 <body>
-<nav class="navbar navbar-expand-lg bg-body" data-bs-theme="dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">SEcollab</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+  {% if is_logged_in %}
+    {% include "headerloggedin.html" %}
+  {% else %}
+    {% include "headerloggedout.html" %}
+  {% endif %}
 
+  <section class="hero-section" style="position: relative; ">
+        <button id="toggle-dark-mode" style="width: 40px;position:absolute;top:3%;right:3%;"><img style="width: 40px;" src="../static/images/download.png"></button>
 
+<!--    <div class="hero-content" style="position: relative; z-index: 1; padding: 20px; color: #fff; text-align: center;">-->
 
-        <li class="nav-item">
-          <a class="nav-link"  href="{{ url_for('allcollbration') }}">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link"  href="{{ url_for('allblogs') }}">Blogs</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('otherusers') }}">Users</a>
-        </li>
-      </ul>
+<!--      <h1 class="animated-text">Ohana: Creating a Timeless and Aesthetic Memories</h1>-->
+<!--      <h1 style="font-size: 18px; color: gold;" class="animated-text">At "ኦሃና የክት ጥሪ," we take great pride in our ability to create customized and all-encompassing experiences for high school seniors as they approach graduation. Our main objective is to relieve their stress and allow them to fully engage in the joy and festivities of this significant moment.</h1>-->
+<!--      <button type="button" class="btn btn-primary">Primary</button>-->
+      <button type="button" class="btn btn-light" style="position:absolute;border-radius:35%;top:75%;left: 11%;width:37%;height:12%;font-size:55px;padding-bottom:20px;">Contact Us</button>
+    </div>
+  </section>
 
+  <a href="{{ url_for('partners') }}" style="text-decoration: none;"><h1 class="test" style="color:#a0702c;">Our partners</h1></a>
+  <hr>
+  <div class="container">
+    <div class="image" style="background-image: url('../static/images/awaqi.jpg'); height:140px;"></div>
+    <div class="image" style="background-image: url('../static/images/afriwork.png'); height:140px;"></div>
+    <div class="image" style="background-image: url('static/images/luminous.png'); height:140px;"></div>
+    <div class="image" style="background-image: url('static/images/gezeta.jpg'); height:140px;"></div>
+    <div class="image" style="background-image: url('static/images/amplify.jpg'); height:140px;width: 300px;"></div>
+  </div>
 
+  <hr>
+
+  <div>
+   <a href="{{ url_for('event') }}"> <h1 class="test" style="color:#a0702c;"> The programs we provide</h1> </a>
+    <div class="parent">
+      <div class="child" style="">
+        <img src="../static/images/473.jpg" style="width: 100%;" alt="Event photo">
+        <h2 class="childh2">Graduation</h2>
+        <p class="childp">description</p>
+      </div>
+      <div class="child">
+        <img src="../static/images/473.jpg" style="width: 100%;" alt="Event photo">
+        <h2 class="childh2">Training</h2>
+        <p class="childp">description</p>
+      </div>
+      <div class="child">
+        <img src="../static/images/473.jpg" style="width: 100%;" alt="Event photo">
+        <h2 class="childh2">Graduation</h2>
+        <p class="childp">description</p>
+      </div>
+      <div class="child">
+        <img src="../static/images/473.jpg" style="width: 100%;" alt="Event photo">
+        <h2 class="childh2">Graduation</h2>
+        <p class="childp">description</p>
+      </div>
     </div>
   </div>
-</nav>
 
-<!-- Intro Section -->
-
-    <div class="containe">
-        <div class="cover-image" >
-            <div class="text">
-        <h1>Welcome to SEcollab</h1>
-        <p>A platform for software engineers to collaborate, write blogs, and connect with others.</p>
-
-        <a href="templates/index.html" class="btn btn-light">View Project</a>
-            </div>
+  <a href="{{ url_for('whatwedid') }}"><h1 class="test" style="color:#a0702c;">Previous Events</h1> </a>
+  <div id="carouselExampleCaptions" class="carousel slide carousel-fade carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../static/images/473.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../static/images/473.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../static/images/473.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
 
-<section id="features" class="features">
-    <div class="container">
-        <h2 class="section-title">Features</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="feature">
-                    <img src="static/images/blogs.PNG" alt="Feature Image">
-                    <h3>Write Blog</h3>
-                    <p>A user can add their own blog.</p>
+<a href="{{ url_for('testimonials') }}"><h1 style="color:#a0702c;margin-left:30%;margin-bottom:40px;">Testimonial</h1></a>
+<div class="owl-carousel owl-theme mt-8">
+        <div class="owl-item">
+            <div class="card">
+                <div class="img-card">
+                    <img src="../static/images/473.jpg"
+                        alt="alternative for image">
+                </div>
+                <div class="testimonial mt-6 mb-4">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus expedita dicta doloremque odit
+                    saepe quo natus aut accusantium alias blanditiis.
+                </div>
+                <div class="name">
+                    Denis Richie
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="feature">
-                    <img src="static/images/myprojects.PNG" alt="Feature Image">
-                    <h3>Add project for collaboration</h3>
-                    <p>A project could be put up for collaboration, and the owner can choose who to collaborate with.</p>
+        </div>
+        <div class="owl-item">
+            <div class="card">
+                <div class="img-card">
+                    <img src="https://images.pexels.com/photos/1024311/pexels-photo-1024311.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+                        alt="">
+                </div>
+                <div class="testimonial mt-4 mb-2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus expedita dicta doloremque odit
+                    saepe quo natus aut accusantium alias blanditiis.
+                </div>
+                <div class="name">
+                    Lisa Sthalekar
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="feature">
-                    <img src="static/images/follow.PNG" alt="Feature Image">
-                    <h3>Follow fellow SE</h3>
-                    <p>By following other SE, we can get access to their blogs and have access to their projects.</p>
+        </div>
+        <div class="owl-item">
+            <div class="card">
+                <div class="img-card">
+                    <img src="https://images.pexels.com/photos/1036622/pexels-photo-1036622.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                        alt="">
+                </div>
+                <div class="testimonial mt-4 mb-2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus expedita dicta doloremque odit
+                    saepe quo natus aut accusantium alias blanditiis.
+                </div>
+                <div class="name">
+                    Elizabith Richie
+                </div>
+            </div>
+        </div>
+        <div class="owl-item">
+            <div class="card">
+                <div class="img-card">
+                    <img src="https://images.pexels.com/photos/1212984/pexels-photo-1212984.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                        alt="">
+                </div>
+                <div class="testimonial mt-6 mb-2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus expedita dicta doloremque odit
+                    saepe quo natus aut accusantium alias blanditiis.
+                </div>
+                <div class="name">
+                    Daniel Xavier
+                </div>
+            </div>
+        </div>
+        <div class="owl-item">
+            <div class="card">
+                <div class="img-card">
+                    <img src="https://images.pexels.com/photos/1832959/pexels-photo-1832959.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                        alt="">
+                </div>
+                <div class="testimonial mt-4 mb-2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus expedita dicta doloremque odit
+                    saepe quo natus aut accusantium alias blanditiis.
+                </div>
+                <div class="name">
+                    Emma Watson
+                </div>
+            </div>
+        </div>
+        <div class="owl-item">
+            <div class="card">
+                <div class="img-card">
+                    <img src="https://images.pexels.com/photos/718261/pexels-photo-718261.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        alt="">
+                </div>
+                <div class="testimonial mt-4 mb-2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus expedita dicta doloremque odit
+                    saepe quo natus aut accusantium alias blanditiis.
+                </div>
+                <div class="name">
+                    Mohammad Imran
                 </div>
             </div>
         </div>
     </div>
-</section>
-<!-- About Section -->
-<section id="about">
-    <div class="container">
-        <h2>About</h2>
-        <p>The inspiration behind SEcollab stems from the challenges we faced in finding project partners.
-            We realized that existing automatic matching systems often fall short in connecting us with peers
-            who share our vision and goals. This led us to envision a platform where users can actively seek
-            collaboration for their projects, allowing them to find like-minded partners who are passionate about
-            the same ideas. By providing a space for users to connect and collaborate based on their specific project needs,
-            SEcollab aims to facilitate meaningful partnerships and foster innovation in the software engineering community.</p>
 
-    </div>
-</section>
-<section id="team" class="team">
-    <div class="container">
-         <h2>Team</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="member">
-                    <h3>Name: Fikadu Getnet</h3>
-                    <p style="color: black;"><a href="https://github.com/fikadu5" style="color: black;">Github profile: https://github.com/fikadu5</a></p>
-                    <p><a href="https://www.linkedin.com/in/fikadu-getnet-" style="color: black;">LinkedIn profile: https://www.linkedin.com/in/fikadu-getnet-</a></p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="member">
-                    <h3>Name: Zelalem Getnet</h3>
-                    <p><a href="https://github.com/zelalem3" style="color: black;">Github profile: https://github.com/zelalem3</a></p>
-                    <p><a href="https://www.linkedin.com/in/zelalem-getnet-533326246" style="color: black;">LinkedIn profile: https://www.linkedin.com/in/zelalem-getnet-533326246</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<a href="https://github.com/zelalem3/SEcollab" class="github-link">
-    <p>Github Repository: https://github.com/zelalem3/SEcollab</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="cta-section" style="margin: 0px;background-color: #021f16;">
+    <h2 style="padding-top:20px;">Ready to book your event?</h2>
+    <a class="cta-button" href="{{ url_for('book') }}">Book an event Now</a>
+  <footer>
+    <p>&copy; {{ year }} OHANA. All rights reserved.</p>
+  </footer>
+  </section>
+
+
+<a href="https://www.tiktok.com/ohana" class="social-icon social-icon-tiktok" style="background-color: none;">
+  <i class="fab fa-tiktok"></i>
 </a>
-<footer>
-    <div class="container">
-        <p>2024 SEcollab, All rights reserved.</p>
-    </div>
-</footer>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<a href="https://www.instagram.com/ohana" class="social-icon social-icon-instagram">
+  <i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://www.linkedin.com/ohana" class="social-icon social-icon-telegram">
+  <i class="fab fa-telegram"></i>
+</a>
+
+<a href="https://www.youtube.com/ohana" class="social-icon social-icon-youtube">
+  <i class="fab fa-youtube"></i>
+</a>
+
+
+  <div class="loader-wrapper">
+      <span class="loader"><img class="rotating-image" src="../static/images/ohana.PNG"></span>
+    </div>
+
+
+
+
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+  <script src="../static/js/darkmode.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+
+      var observer = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          } else {
+            entry.target.classList.remove('visible');
+          }
+        });
+      }, options);
+
+
+  </script>
+  <script>
+
+$(document).ready(function () {
+    var silder = $(".owl-carousel");
+    silder.owlCarousel({
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: false,
+        items: 1,
+        stagePadding: 20,
+        center: true,
+        nav: false,
+        margin: 50,
+        dots: true,
+        loop: true,
+        responsive: {
+            0: { items: 1 },
+            480: { items: 2 },
+            575: { items: 2 },
+            768: { items: 2 },
+            991: { items: 3 },
+            1200: { items: 4 }
+        }
+    });
+});
+  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+<script src="https://kit.fontawesome.com/3259a3ed9a.js" crossorigin="anonymous"></script>
+<script src="../static/js/index.js"></script>
 </body>
 </html>
